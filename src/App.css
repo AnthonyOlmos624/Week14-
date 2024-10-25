@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /*should be the full viewport height */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Sidebar {
+  width: 200px; /* the width of sidebar*/
+  padding:20px;
+  background-color: #6c4e9c;
+  border-right: 1px solid #ccc; 
+}
+
+.ItemCard {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #123b08; /* This should be card background*/
+}
