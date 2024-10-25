@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+components 
+App.tsx
+ItemCard.tsx
+ItemList.tsx 
+Sidebar.tsx
+testData.tsx 
