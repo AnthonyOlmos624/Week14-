@@ -1,7 +1,7 @@
 //adding useState from React in App.tsx. need it to hold items, pass state to ItemList and need to update total caculations  so that they are also in state. 
 
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Sidebar from './Sidebar'; //import Sidebar component 
 import ItemList from './ItemList';
 import { testItems } from './testData'; //import test data
@@ -14,7 +14,7 @@ function App() {
 
   //adding a new item function so that I can add new items and also adding a button to trigger the function. 
   const addItem = () => {
-    const newItem = { id: Date.now(), name: "New Item", price: 50, quantity: 1};
+    const newItem = { id: Date.now(), name: "New Item", price: 75, quantity: 1};
     setItems([...items, newItem]);
   }
   //also need to add a delete function as a prop to itemCard via ItemList
