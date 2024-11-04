@@ -1,3 +1,5 @@
+//Going to move my testData into State so that the app can work dynamically
+
 
 //define interface to type-check the structure of each item in the array
 export interface Item {
@@ -9,8 +11,8 @@ export interface Item {
 
 //lets define the testItems array with the Item[] type
 export const testItems: Item[] = [
-    { id: 1, name: "Cellphone", price: 185, quantity: 4},
-    { id: 2, name: "Playstation 3", price: 150, quantity: 3},
+    { id: 1, name: "Laptop", price: 125, quantity: 2},
+    { id: 2, name: "Cellphone", price: 85, quantity: 3},
     { id: 3, name: "Camera", price: 250, quantity: 4},
 ];
 //need somthing to calculate total of items that are picked
