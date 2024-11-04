@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Item } from './testData'
 
 //Should define the props for ItemCard where 'item' is of type Item. Adding delete and update function so that it can accept the prop 
@@ -14,8 +14,8 @@ function ItemCard ({ item, deleteItem, updateQuantity }: ItemCardProps) {
             <h3>{item.name}</h3>
             <p>Price: ${item.price}</p>
             <p>Quantity: {item.quantity}</p>
-            <button onClick={() => deleteItem(item.id)}>Delete</button>
-            <button onClick={() => updateQuantity(item.id, Math.max(0, item.quantity + 1))}>Increase</button>
+            <button onClick={() => deleteItem(item.id)} className="delete-button">Delete</button>
+            <button onClick={() => updateQuantity(item.id, Math.max(0, item.quantity + 1))} className="increase-button">Increase</button>
             <button onClick={() => updateQuantity(item.id, Math.max(0, item.quantity - 1))}>Decrease</button>
         </div>
     );
