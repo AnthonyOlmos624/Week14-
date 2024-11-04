@@ -34,7 +34,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Shopping Cart</h1>
+      <h1>Shopping Cart</h1> 
+      <br></br>
       <button onClick={addItem}>Add New Item</button>
       <div style={{ display: "flex" }}>
         <Sidebar /> {/* need to Render Sidebar */}
