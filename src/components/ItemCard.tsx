@@ -17,6 +17,7 @@ function ItemCard ({ item, deleteItem, updateQuantity }: ItemCardProps) {
             <button onClick={() => deleteItem(item.id)} className="delete-button">Delete</button>
             <button onClick={() => updateQuantity(item.id, Math.max(0, item.quantity + 1))} className="increase-button">Increase</button>
             <button onClick={() => updateQuantity(item.id, Math.max(0, item.quantity - 1))}>Decrease</button>
+            <button onClick={() => onEdit(item)}>Edit</button>
         </div>
     );
 }
