@@ -20,6 +20,7 @@ function ItemList({ items, deleteItem, updateQuantity }: ItemListProps) {
                     item={item}
                     deleteItem={deleteItem}
                     updateQuantity={updateQuantity} 
+                    onEdit={() => setEditingItem(item)}
                     
                 />
             ))}
