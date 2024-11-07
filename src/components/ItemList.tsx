@@ -9,9 +9,10 @@ interface ItemListProps {
     items: Item[];
     deleteItem: (id: number) => void;
     updateQuantity: (id: number, newQuantity: number) => void;
+    setEditingItem: (item: Item) => void; 
 }
 
-function ItemList({ items, deleteItem, updateQuantity }: ItemListProps) {
+function ItemList({ items, deleteItem, updateQuantity, setEditingItem }: ItemListProps) {
     return (
         <div>
             {items.map((item) => (

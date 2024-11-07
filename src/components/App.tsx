@@ -12,6 +12,7 @@ import "../App.css"; // Import CSS file
 function App() {
   const [items, setItems] = useState(testItems);
   const [editingItem, setEditingItem] = useState(null);
+  const [ sortOrder, setSortOrder] = useState("default") 
   
   const totalAmount = items.reduce((total, item) => total + item.price * item.quantity, 0);
 
@@ -38,17 +39,34 @@ function App() {
       )
     );
   };
+
+  //adding a sortItems so that user can choose if they would like to see items of higher or lower value.
+  const sortItems = (items) => {
+    if(sortOrder === "low-to-high"){
+      return [...items].sort((a,b) => a.price - b.price);
+    } else if ( sortOrder === "high-to-low") {
+      return [...items].sort((a,b) => b.price - a.price);
+    }
+    return items; //default order (no sorting)
+  }; 
+
+
+
+  //adding a filter function for Sidebar
+  const filterItemsByPrice = () => {
+    const filteredItems = items.filter(item => item.price <= 100);// Examle filter
+    setItems(filteredItems); 
+  }
   
 
   return (
     <div className="App">
       <h1>Shopping Cart</h1> 
-      <br></br>
       <ItemForm onSubmit={addOrUpdateItem} existingItem={editingItem} />
       <button onClick={() => setEditingItem(null)}>Add New Item</button>
       <div style={{ display: "flex" }}>
-        <Sidebar /> {/* need to Render Sidebar */}
-        <ItemList items={items} deleteItem={deleteItem} updateQuantity={updateQuantity} />
+        <Sidebar filterItemsByPrice={filterItemsByPrice} /> 
+        <ItemList items={items} deleteItem={deleteItem} updateQuantity={updateQuantity} setEditingItem={setEditingItem} />
         <h2>Total: ${totalAmount.toFixed(2)}</h2>
       </div>
     </div>

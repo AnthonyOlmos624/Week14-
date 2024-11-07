@@ -5,10 +5,11 @@ import { Item } from './testData'
 interface ItemCardProps {
     item: Item;
     deleteItem: (id: number) => void;
-    updateQuantity: (id: number, newQuantity: number) => void 
+    updateQuantity: (id: number, newQuantity: number) => void;
+    onEdit: (item: Item) => void; 
 }
 
-function ItemCard ({ item, deleteItem, updateQuantity }: ItemCardProps) {
+function ItemCard ({ item, deleteItem, updateQuantity, onEdit }: ItemCardProps) {
     return(
         <div className="ItemCard">
             <h3>{item.name}</h3>
