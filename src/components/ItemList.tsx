@@ -1,6 +1,6 @@
 
 import ItemCard from "./ItemCard";
-import { Item } from './testData'
+import { Item } from './types'
 
 
 //need to define the props for ItemList ensuring the 'items' prop is an array of Item. Need to add prop to pass deleteItem and updateQuantity
