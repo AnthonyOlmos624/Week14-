@@ -1,12 +1,13 @@
 //Going to move my testData into State so that the app can work dynamically
 
 
-//define interface to type-check the structure of each item in the array
+
+
 export interface Item {
-    id: number;
+    id?: number;
     name: string;
-    price: number;
-    quantity: number;
+    price: number; 
+    quantity: number; 
 }
 
 //lets define the testItems array with the Item[] type
@@ -21,3 +22,5 @@ export const calculateTotal = (items: Item[]): number => {
 };
 
 export const totalAmount = calculateTotal(testItems); 
+
+

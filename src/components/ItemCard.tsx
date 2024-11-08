@@ -10,14 +10,16 @@ interface ItemCardProps {
 }
 
 function ItemCard ({ item, deleteItem, updateQuantity, onEdit }: ItemCardProps) {
+    //Ensure item.id is defined if nor return early or do nothing
+    const itemId = item.id ?? 0; //default to 0 if item.id is undefined 
     return(
         <div className="ItemCard">
             <h3>{item.name}</h3>
             <p>Price: ${item.price}</p>
             <p>Quantity: {item.quantity}</p>
-            <button onClick={() => deleteItem(item.id)} className="delete-button">Delete</button>
-            <button onClick={() => updateQuantity(item.id, Math.max(0, item.quantity + 1))} className="increase-button">Increase</button>
-            <button onClick={() => updateQuantity(item.id, Math.max(0, item.quantity - 1))}>Decrease</button>
+            <button onClick={() => deleteItem(itemId!)} className="delete-button">Delete</button>
+            <button onClick={() => updateQuantity(itemId, item.quantity + 1)} className="increase-button">Increase</button>
+            <button onClick={() => updateQuantity(itemId, item.quantity - 1)} className="decrease-button">Decrease</button>
             <button onClick={() => onEdit(item)}>Edit</button>
         </div>
     );
