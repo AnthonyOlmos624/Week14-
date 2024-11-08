@@ -1,8 +1,5 @@
 //Going to move my testData into State so that the app can work dynamically
 
-
-
-
 export interface Item {
     id?: number;
     name: string;
