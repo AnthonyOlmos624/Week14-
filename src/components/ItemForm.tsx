@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 interface ItemFormProps {
     onSubmit: (item: { id?: number, name: string, price: number, quantity: number}) => void; 
-    existingItem?: { id: number, name: string, price: number, quantity: number};
+    existingItem?: { id?: number, name: string, price: number, quantity: number};
 }
 
 function ItemForm ({ onSubmit, existingItem }: ItemFormProps) {
