@@ -75,7 +75,6 @@ function App() {
     <div className="App">
       <h1>Shopping Cart</h1> 
       <ItemForm onSubmit={addOrUpdateItem} existingItem={editingItem ?? undefined} />
-      <button onClick={() => setEditingItem(null)}>Add New Item</button>
       <div style={{ display: "flex" }}>
         <Sidebar setSortOrder={setSortOrder} filterItemsByPrice={filterItemsByPrice} /> 
         <ItemList items={sortItems(filteredItems)} deleteItem={deleteItem} updateQuantity={updateQuantity} setEditingItem={setEditingItem} />
