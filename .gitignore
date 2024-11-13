@@ -29,3 +29,5 @@ ItemCard.tsx
 ItemList.tsx 
 Sidebar.tsx
 testData.tsx 
+
+db.json
