@@ -6,7 +6,7 @@ import { useEffect, useState, useMemo } from 'react';
 import Sidebar from './Sidebar'; //import Sidebar component 
 import ItemList from './ItemList';
 import ItemForm from './ItemForm'; 
-import { Item } from './types'
+import { Item } from '../types'
 import { testItems } from './testData'; //import test data
 import "../App.css"; // Import CSS file
 

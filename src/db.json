@@ -1,8 +1,10 @@
 {
-    "id?" : "1",
-    "name" : "Chocolate",
-    "price" : "1.50", 
-    "quantity": "1"  
-
-
+    "Products": [
+        {
+            "id": 1,
+            "name": "Chocolate",
+            "price": 2.50,
+            "quantity": 3
+        }
+    ]
 }
